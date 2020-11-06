@@ -42,7 +42,6 @@ namespace TodoApi.Controllers
             {
                 using (TodoAPIEntities context = new TodoAPIEntities())
                 {
-                    var a = context.TODO_POST.Where(x => x.RF_USER_ID == data.RF_USER_ID).Max(x => x.SQ_ID);
                     context.TODO_POST.Add(new TODO_POST() {
                         RF_USER_ID = data.RF_USER_ID,
                         TX_POST = data.TX_POST,
